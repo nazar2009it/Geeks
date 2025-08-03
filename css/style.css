@@ -7,7 +7,8 @@ header {
           justify-content: space-between;
   max-width: 1920px;
   margin-inline: auto;
-  height: 100px;
+  height: 65px;
+  border-bottom: 1px solid #e5e9eb;
 }
 header .left,
 header .right {
@@ -42,8 +43,16 @@ header .left ul li a {
   letter-spacing: -0.01em;
   color: #252c32;
 }
+header .left ul .create {
+  border: 1px solid #dde2e4;
+  border-radius: 6px;
+  padding: 4px 12px;
+  width: 68px;
+  height: 32px;
+}
 header .right {
   gap: 16px;
+  margin-right: 20px;
 }
 
 .burger {
@@ -57,4 +66,27 @@ header .right {
   .burger {
     display: block;
   }
+}
+@media screen and (max-width: 760px) {
+  .question, .settings {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .bell {
+    display: none;
+  }
+}
+.Logomark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px;
+}
+.Logomark p {
+  color: #7F56D9;
+  padding-left: 10px;
 }

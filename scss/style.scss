@@ -3,7 +3,8 @@ header {
     justify-content: space-between;
     max-width: 1920px;
     margin-inline: auto;
-    height: 100px;
+    height: 65px;
+    border-bottom: 1px solid #e5e9eb;
     .left,
      .right {
         display: flex;
@@ -27,21 +28,58 @@ header {
                     color: #252c32;
                 }
             }
+            .create{
+                border: 1px solid #dde2e4;
+                border-radius: 6px;
+                padding: 4px 12px;
+                width: 68px;
+                height: 32px;
+            }
         }
     }
-    .right{
+    .right {
         gap: 16px;
+        margin-right: 20px;
     }
 }
-.burger{
+.burger {
     display: none;
 }
+@media screen and (max-width: 1440px ) {
+    
+}
+@media screen and (max-width: 1280px ) {
 
+}
 @media screen and (max-width: 960px ) {
     nav {
         display: none;
     }
-    .burger{
+    .burger {
         display: block;
     }
 }
+@media screen and (max-width: 760px ) {
+    .question, .settings{
+        display: none;
+    }
+}
+@media screen and (max-width: 480px ) {
+    .bell{
+        display: none;
+    }
+}
+@media screen and (max-width: 360px ) {
+    
+}
+.Logomark {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    p {
+        color: #7F56D9;
+        padding-left: 10px;
+    }
+}
+
+

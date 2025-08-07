@@ -1,3 +1,14 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.html {
+  font-size: 20px;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,24 +70,68 @@ header .right {
   display: none;
 }
 
-@media screen and (max-width: 960px) {
-  nav {
-    display: none;
-  }
-  .burger {
-    display: block;
-  }
+.main {
+  margin-top: 64px;
 }
-@media screen and (max-width: 760px) {
-  .question, .settings {
-    display: none;
-  }
+
+.analytics {
+  max-width: 1920px;
 }
-@media screen and (max-width: 480px) {
-  .bell {
-    display: none;
-  }
+.analytics h2 {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #101828;
 }
+.analytics p {
+  margin-bottom: 48px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  color: #667085;
+}
+.analytics .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+}
+.analytics .buttons .leftbutton {
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 16px 28px;
+  width: 143px;
+  height: 60px;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+}
+.analytics .buttons .rightbutton {
+  border-radius: 8px;
+  width: 121px;
+  height: 60px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+          box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  background: #7f56d9;
+  border: 1px solid #7f56d9;
+  color: white;
+  font-size: 18px;
+}
+
 .Logomark {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -89,4 +144,112 @@ header .right {
 .Logomark p {
   color: #7F56D9;
   padding-left: 10px;
+}
+
+.comp {
+  margin: 64px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/Container.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+}
+
+.breaktext1920normal {
+  display: block;
+}
+
+.breaktextsmarter {
+  display: inline;
+}
+
+@media screen and (max-width: 1280px) {
+  .comp {
+    background-image: url(../images/Content.png);
+  }
+}
+@media screen and (max-width: 960px) {
+  nav {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .main h2 {
+    font-size: 44px;
+  }
+  .comp {
+    background-image: url(../images/Content960.png);
+  }
+}
+@media screen and (max-width: 760px) {
+  .question, .settings {
+    display: none;
+  }
+  .breaktextsmarter {
+    display: block;
+  }
+  .breaktextconvert {
+    display: block;
+  }
+  .breaktext1920normal {
+    all: unset;
+  }
+  .breaktextstartup {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .bell {
+    display: none;
+  }
+  .analytics p {
+    font-size: 16px;
+  }
+  .analytics h2 {
+    font-size: 32px;
+  }
+  .analytics .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12px;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .analytics .buttons .leftbutton,
+  .analytics .buttons .rightbutton {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (max-width: 360px) {
+  .breaktextgrow {
+    display: block;
+  }
+  .breaktextsmarter {
+    all: unset;
+  }
+  .analytics p {
+    font-size: 16px;
+  }
+  .analytics h2 {
+    font-size: 28px;
+  }
 }

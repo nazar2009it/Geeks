@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'mixins';
+@import 'core';
 header {
     display: flex;
     justify-content: space-between;
@@ -45,32 +48,56 @@ header {
 .burger {
     display: none;
 }
-@media screen and (max-width: 1440px ) {
-    
+.main{
+    margin-top: 64px;
 }
-@media screen and (max-width: 1280px ) {
-
-}
-@media screen and (max-width: 960px ) {
-    nav {
-        display: none;
+.analytics{
+    max-width: 1920px;
+    h2{
+        margin-bottom: 24px;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #101828;
     }
-    .burger {
-        display: block;
+    p{
+        margin-bottom: 48px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+        color: #667085;
     }
-}
-@media screen and (max-width: 760px ) {
-    .question, .settings{
-        display: none;
+    .buttons{
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        .leftbutton{
+            border: 1px solid #d0d5dd;
+            border-radius: 8px;
+            padding: 16px 28px;
+            width: 143px;
+            height: 60px;
+            background-color: white;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            gap: 10px;
+            font-size: 18px;
+        }
+        .rightbutton{
+            border-radius: 8px;
+            width: 121px;
+            height: 60px;
+            box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+            background: #7f56d9;
+            border: 1px solid #7f56d9;
+            color: white;
+            font-size: 18px;
+        }
     }
-}
-@media screen and (max-width: 480px ) {
-    .bell{
-        display: none;
-    }
-}
-@media screen and (max-width: 360px ) {
-    
 }
 .Logomark {
     display: flex;
@@ -81,5 +108,107 @@ header {
         padding-left: 10px;
     }
 }
+.comp{
+    margin: 64px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/Container.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top; 
+}
+.breaktext1920normal{
+    display: block;
+}
+.breaktextsmarter{
+    display: inline;
+}
+@media screen and (max-width: 1440px ) {
+    
+}
+@media screen and (max-width: 1280px ) {
+    .comp{
+        background-image: url(../images/Content.png);
+    }
+}
+@media screen and (max-width: 960px ) {
+    nav {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+    .main{
+        h2{
+            font-size: 44px;
+        }
+    }
+    .comp{
+        background-image: url(../images/Content960.png);
+    }
+}
+@media screen and (max-width: 760px ) {
+    .question, .settings{
+        display: none;
+    }
+    .breaktextsmarter{
+        display: block;
+    }
+    .breaktextconvert{
+        display: block;
+    }
+    .breaktext1920normal{
+         all: unset;
+    }
+    .breaktextstartup{
+        display: block;
+    }
+}
+@media screen and (max-width: 480px ) {
+    .bell{
+        display: none;
+    }
+    .analytics{
+        p{
+            font-size: 16px;
+        }
+        h2{
+            font-size: 32px;
+        }
+    }
+   .analytics .buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch; 
+    width: 100%;          
+    padding: 0 20px;      
+  }
+    .analytics .buttons .leftbutton,
+  .analytics .buttons .rightbutton {
+    width: 100%;     
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 360px ) {
+    .breaktextgrow{
+        display: block;
+        
+    }
+    .breaktextsmarter{
+        all: unset;
+    }
+    .analytics{
+        p{
+            font-size: 16px;
+        }
+        h2{
+            font-size: 28px;
+        }
+    }
+}
+
 
 

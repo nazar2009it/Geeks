@@ -1,0 +1,8 @@
+@mixin center{
+    display: flex;
+    justify-content: center;
+}
+:root{
+    $font-family: "Inter", sans-serif;
+    $second-family: "Heebo", sans-serif;
+}

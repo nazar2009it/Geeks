@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'core';
+
 header {
     display: flex;
     justify-content: space-between;
@@ -149,6 +150,37 @@ header {
     .comp{
         background-image: url(../images/Content960.png);
     }
+    .faq-container{
+        width: 960px I !important;
+    }
+    .faq-header{
+        h1{
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 122%;
+            letter-spacing: -0.02em;
+            text-align: center;
+            color: #101828;
+        }
+    }
+    .faq-items{
+        width: 920px ;
+    }
+    .faq-icon{
+        display: inline-flex;
+    }
+    .faq-label {
+        width: 640px Im !important;
+        padding-left: 80px !important;
+        padding-right: 80px !important;
+  }
+  .faq-content{
+        p{
+            width: 592px !important;
+            margin-left: 80px;
+        }
+
+  }
 }
 @media screen and (max-width: 760px ) {
     .question, .settings{
@@ -208,7 +240,178 @@ header {
             font-size: 28px;
         }
     }
+    .faq-header{
+        margin-left: 46px;
+        width: 268px;
+        h1{
+            font-size: 30px !important;
+            line-height: 127%;
+        }
+    }
+    .faq-label{
+        width: 300px !important;
+        font-size: 16px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+    .faq-content{
+        width: 268px !important;
+       p{
+            width: 268px !important;
+            margin-left: 30px;
+       }
+    }
 }
+.faq-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    p{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+        color: #667085;
+        margin-top: 20px;
+    }
+    h1{
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 122%;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #101828;
+    }
+}
+.faq-items{
+    margin-bottom: 64px;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1520px; 
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Inter", sans-serif;
+    width: 100%;
+    height: auto;
+    border: none;
+    background: none;
+    padding-bottom: 10px;
+}
+.faq-content {
+    display: none; 
+    padding: 10px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #667085;
+    width: 768px !important;
+}
+.faq-input:checked ~ .faq-content {
+    display: block; 
+}
+
+.faq-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 16px 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 156%;
+    color: #101828;
+    font-family:  "Inter", sans-serif;
+}
+.faq-icon::before {
+    content: "+";
+    font-weight: bold;
+}
+.faq-input:checked + .faq-label .faq-icon::before {
+    content: "–";
+}
+.faq-input {
+    display: none;
+}
+.faq-content {
+    display: none;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #667085;
+}
+.faq-input:checked ~ .faq-content {
+    display: block;
+}
+.faq-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #7F56D9; /* фиолетовый фон кружка */
+    color: white;              /* цвет символа внутри */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    border: none; /* можно убрать серую обводку */
+    flex-shrink: 0;
+}
+
+.faq-icon::before {
+    content: "+";
+    color: white; /* символ "+" белого цвета на фиолетовом фоне */
+}
+
+.faq-input:checked + .faq-label .faq-icon::before {
+    content: "–";
+    color: white; /* символ "–" белого цвета */
+}
+.faq-input:checked + .faq-label 
+.faq-input:checked ~ .faq-content {
+    display: block;
+}
+.faq-content {
+    display: none;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #667085;
+    width: 100%;
+    box-sizing: border-box;
+}
+.faq-item:not(:last-child) {
+  border-bottom: 1px solid #eaecf0;
+}
+.faq-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #7F56D9; /* фиолетовый круг */
+    color: #7F56D9; /* фиолетовый цвет символа */
+    background-color: transparent; /* прозрачный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.faq-icon::before {
+    content: "+";
+    color: #7F56D9; /* фиолетовый плюс */
+}
+
+.faq-input:checked + .faq-label .faq-icon::before {
+    content: "–";
+    color: #7F56D9; /* фиолетовый минус */
+}
+
+
+
 
 
 

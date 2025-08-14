@@ -181,6 +181,9 @@ header {
         }
 
   }
+  .greed-item{
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media screen and (max-width: 760px ) {
     .question, .settings{
@@ -389,9 +392,9 @@ header {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    border: 2px solid #7F56D9; /* фиолетовый круг */
-    color: #7F56D9; /* фиолетовый цвет символа */
-    background-color: transparent; /* прозрачный фон */
+    border: 2px solid #7F56D9; 
+    color: #7F56D9; 
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -402,15 +405,13 @@ header {
 
 .faq-icon::before {
     content: "+";
-    color: #7F56D9; /* фиолетовый плюс */
+    color: #7F56D9; 
 }
 
 .faq-input:checked + .faq-label .faq-icon::before {
     content: "–";
-    color: #7F56D9; /* фиолетовый минус */
+    color: #7F56D9; 
 }
-
-
 
 
 

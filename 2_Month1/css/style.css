@@ -183,3 +183,19 @@ footer a {
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
+
+@media screen and (max-width: 1023px) {
+  .help {
+    -ms-grid-columns: 4fr;
+    grid-template-columns: 4fr;
+    height: 600px;
+  }
+  .portfolio {
+    height: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .contact {
+    height: 450px;
+    display: block;
+  }
+}
